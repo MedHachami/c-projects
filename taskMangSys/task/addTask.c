@@ -39,6 +39,6 @@ int addTask(sqlite3* db){
     }
 
     sqlite3_finalize(stmt);
-
+    
     return rc;
 }

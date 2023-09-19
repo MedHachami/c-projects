@@ -4,6 +4,6 @@
 #include "../task.h"
 extern int task();
 extern int addTask(sqlite3*);
-extern int updateTask();
-extern int assignTask();
-extern int getUserDetails();
+extern int updateTask(sqlite3*);
+extern int assignTask(sqlite3*);
+extern int getUserDetails(sqlite3*);

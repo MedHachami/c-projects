@@ -21,11 +21,15 @@ int task(){
         switch (choice)
         {
         case 1 :
-            addTask(db);
+            if(addTask(db) != SQLITE_OK){
+                printf("\t\t\t\t\t\t\t Task added successfully");
+            }
             break;
-        // case 2 :
-        //     updateTask();
-        //     break;
+        case 2 :
+            if(updateTask(db) != SQLITE_OK){
+                printf("\t\t\t\t\t\t\t Task updated successfully");
+            }
+            break;
         // case 3 :
         //     changeStatus();
         //     break;
