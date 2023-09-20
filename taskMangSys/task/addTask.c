@@ -1,44 +1,49 @@
 #include "taskMenu.h"
 
-int addTask(sqlite3* db){
+int  addTask(sqlite3* db){
     
     sqlite3_stmt* stmt;
     int rc;
+    
     struct Task newTask;
-    const char* sql = "INSERT INTO task(taskName,description,newDate,assignedToUser,status) VALUES(?,?,?,?,?);";
+    
+        const char* sql = "INSERT INTO Task(title,description,status,dueDate) VALUES(?,?,?,?);";
 
     rc = sqlite3_prepare_v2(db,sql,-1,&stmt,NULL);
     if(rc != SQLITE_OK){
         fprintf(stderr, "SQL error: %s\n", sqlite3_errmsg(db));
         printf("tttt");
-        return rc;
+        return 1;
     }
+    strcpy(newTask.som, "To do");
     printf("\t\t\t\tEnter task name : \n");
-    scanf("%s",newTask.title);
+    scanf(" %[^\n]s", newTask.title);
 
     printf("\t\t\t\tEnter description : \n");
-    scanf("%s",newTask.description);
+    scanf(" %[^\n]s", newTask.description);
 
-    printf("\t\t\t\tEnter due Date  : \n");
-    scanf("%s",newTask.dueDate);
+    printf("\t\t\t\tEnter due Date (YYYY-MM-DD): \n");
+    scanf(" %[^\n]s", newTask.dueDate);
 
-    printf("\t\t\t\tEnter assigned id  : \n");
-    scanf("%d",&newTask.assignedToUser);
-
-    strcpy(newTask.status, "To do");
-
-    sqlite3_bind_text(stmt,1,newTask.title,-1,SQLITE_STATIC);
+    // getchar(); 
+    sqlite3_bind_text(stmt,1, newTask.title,-1,SQLITE_STATIC);
     sqlite3_bind_text(stmt, 2, newTask.description, -1, SQLITE_STATIC);
-    sqlite3_bind_text(stmt, 3, newTask.dueDate, -1, SQLITE_STATIC);
-    sqlite3_bind_int(stmt, 4, newTask.assignedToUser);
-    sqlite3_bind_text(stmt,5,newTask.status,-1,SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 3, "To do",-1,SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 4, newTask.dueDate, -1, SQLITE_STATIC);
+    
     rc = sqlite3_step(stmt);
     if (rc != SQLITE_DONE) {
-       printf("aaaa");
+        printf("aaaa");
         fprintf(stderr, "SQL error: %s\n", sqlite3_errmsg(db));
+        sqlite3_finalize(stmt);
+        return 2;
     }
-
+    
     sqlite3_finalize(stmt);
     
-    return rc;
+    
+    
+    return 0;
+    
+    
 }
