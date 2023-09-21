@@ -15,5 +15,5 @@ extern int addTask(sqlite3*);
 extern int updateTask(sqlite3*);
 extern int deleteTask(sqlite3*);
 extern void assignTask(sqlite3*);
-// extern void taskCollab(sqlite3*)
+extern void taskCollab(sqlite3*);
 
