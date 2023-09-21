@@ -8,7 +8,7 @@ main: library
 	@gcc -c -g  main.c main.h 
 
 library:
-	@gcc -c -g   initDB/*.c initDB/*.h task/*.c task/*.h task/showTasks/*.c task/showTasks/*.h task/stats/*.c task/stats/*.h task/findTask/*.c task/findTask/*.h  collaborator/*.c collaborator/*.h collaborator.h task.h
+	@gcc -c -g   initDB/*.c initDB/*.h task/*.c task/*.h task/showTasks/*.c task/showTasks/*.h task/stats/*.c task/stats/*.h task/findTask/*.c task/findTask/*.h  collaborator/*.c collaborator/*.h task/taskCollab/*.c task/taskCollab/*.h  collaborator.h task.h
 
 clean:
 	@rm main .*.swp .*/*.swp *.h.gch */*h.gch *.o .*.c.swp .*/*.c.swp

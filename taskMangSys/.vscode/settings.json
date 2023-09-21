@@ -10,7 +10,8 @@
         "showtasks.h": "c",
         "time.h": "c",
         "collaboratormenu.h": "c",
-        "collaborator.h": "c"
+        "collaborator.h": "c",
+        "taskcollab.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

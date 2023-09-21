@@ -1,11 +1,11 @@
-#include "taskMenu.h"
+#include "taskCollab.h"
 
-void taskCollab(sqlite3* db){
+void showTaskCollab(sqlite3* db){
     int rc;
     sqlite3_stmt* stmt;
     
     const char *sql = "SELECT Task.title, Collaborator.fullName FROM Task, Collaborator, TaskCollaborators "
-                     "WHERE Task.ID = TaskCollaborators.taskID AND TaskCollaborators.collaboratorID = Collaborator.ID;";
+                     "WHERE Task.ID = TaskCollaborators.taskID AND TaskCollaborators.collaboratorID = Collaborator.ID ;";
     rc = sqlite3_prepare_v2(db,sql,-1,&stmt,NULL);
 
     if(rc != SQLITE_OK){

@@ -27,7 +27,7 @@ int main(){
             collab();
             break;
         case 3 :
-            taskCollab(db);
+            taskCollab();
             break;
         case 4 :
             return 0;
