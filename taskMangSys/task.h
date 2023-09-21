@@ -7,8 +7,8 @@ struct Task {
     char title[20];
     char description[50];
     char dueDate[10];
-    // char statu[20];
-    char som[20];
+    char status[20];
+    
 };
 
 #endif

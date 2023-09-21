@@ -22,9 +22,9 @@ int main(){
             task();
             
             break;
-        // case 2 :
-        //     user();
-        //     break;
+        case 2 :
+            collab();
+            break;
         case 3 :
             return 0;
             break;

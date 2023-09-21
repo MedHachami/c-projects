@@ -15,7 +15,7 @@ int  addTask(sqlite3* db){
         printf("tttt");
         return 1;
     }
-    strcpy(newTask.som, "To do");
+    // strcpy(newTask.status, "To do");
     printf("\t\t\t\tEnter task name : \n");
     scanf(" %[^\n]s", newTask.title);
 

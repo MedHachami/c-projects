@@ -4,8 +4,10 @@
 
 #include "../initDB/initDB.h"
 #include "../task.h"
+#include "./showTasks/showTasks.h"
+#include "./findTask/findTask.h"
+#include "./stats/stats.h"
 extern int task();
 extern int addTask(sqlite3*);
 extern int updateTask(sqlite3*);
-extern int assignTask(sqlite3*);
-extern int getUserDetails(sqlite3*);
+extern int deleteTask(sqlite3*);

@@ -13,10 +13,12 @@ int task(){
         printf("\t\t\t\t\t****************\033[31mTASK MENU\033[0m***************************\n");
         printf("\t\t\t\t\t\t\t 1 : Add new task  \n");
         printf("\t\t\t\t\t\t\t 2 : Update Task  \n");
-        printf("\t\t\t\t\t\t\t 3 : Change Status \n");
-        printf("\t\t\t\t\t\t\t 4 : Get User Details  \n");
-        printf("\t\t\t\t\t\t\t 5 : Assing Task to Collaborator \n");
-        printf("\t\t\t\t\t\t\t 6 : Back \n");
+        printf("\t\t\t\t\t\t\t 3 : Show Tasks \n");
+        printf("\t\t\t\t\t\t\t 4 : Find  Task  \n");
+        printf("\t\t\t\t\t\t\t 5 : Delete Task  \n");
+        printf("\t\t\t\t\t\t\t 6 : Assing Task to Collaborator \n");
+        printf("\t\t\t\t\t\t\t 7 : Statistics \n");
+        printf("\t\t\t\t\t\t\t 8 : Back \n");
         scanf("%d",&choice);
         
         switch (choice)
@@ -30,19 +32,25 @@ int task(){
         case 2 :
             int editResult = updateTask(db);
             if(editResult == 0){
-                printf("\t\t\t\t\t\t\t Task edit successfully");
+                printf("\t\t\t\t\t\t Task edit successfully\n");
             }
+        break;
+        case 3 :
+            showTasks(db);
+        break;
+        case 4 :
+            findTask(db);
             break;
-        // case 3 :
-        //     changeStatus();
-        //     break;
-        // case 4 :
-        //     assignTask();
-        //     break;
-        // case 5 :
-        //     getUserDetails();
-        //     break;
-        case 6 :
+        case 5 :
+            int deleteResult = deleteTask(db);
+            if(deleteResult == 0){
+                printf("\t\t\t\t\t\t Task deleted successfully\n");
+            }
+        break;
+        case 7 :
+            stats(db);
+        break;
+        case 8 :
             return 0;
         
         default:
