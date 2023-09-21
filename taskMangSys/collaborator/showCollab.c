@@ -4,7 +4,7 @@ void showCollab(sqlite3* db){
     int rc;
     sqlite3_stmt *stmt ;
 
-    const char * sql = "SELECT * from collaborator ;";
+    const char * sql = "SELECT * from Collaborator ;";
 
     rc = sqlite3_prepare_v2(db,sql,-1,&stmt,NULL);
     if(rc != SQLITE_OK){

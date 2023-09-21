@@ -13,7 +13,8 @@ int main(){
         printf("\t\t\t\t\t****************\033[31mTASK MANAGEMENT SYSTEM\033[0m**************\n");
         printf("\t\t\t\t\t\t\t  1 : TASK  \n");
         printf("\t\t\t\t\t\t\t  2 : COLLABORATORS  \n");
-        printf("\t\t\t\t\t\t\t  3 : Exit  \n");
+        printf("\t\t\t\t\t\t\t  3 : Tasks-Collaborators  \n");
+        printf("\t\t\t\t\t\t\t  4 : Exit  \n");
         scanf("%d",&choice);
         
         switch (choice)
@@ -26,6 +27,9 @@ int main(){
             collab();
             break;
         case 3 :
+            // taskCollab();
+            break;
+        case 4 :
             return 0;
             break;
         

@@ -46,6 +46,8 @@ int task(){
             if(deleteResult == 0){
                 printf("\t\t\t\t\t\t Task deleted successfully\n");
             }
+        case 6:
+            assignTask(db);
         break;
         case 7 :
             stats(db);

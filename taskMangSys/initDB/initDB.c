@@ -26,8 +26,8 @@ int initDb(sqlite3** db){
                                 "taskID INTEGER ,"
                                 "collaboratorID INTEGER,"
                                 "PRIMARY KEY (taskID, collaboratorID),"
-                                "FOREIGN KEY (taskID) REFERENCES Tasks(ID),"
-                                "FOREIGN KEY (collaboratorID) REFERENCES Collaborators(ID)"
+                                "FOREIGN KEY (taskID) REFERENCES Tasks(ID) ON DELETE CASCADE,"
+                                "FOREIGN KEY (collaboratorID) REFERENCES Collaborators(ID) ON DELETE CASCADE"
                                 ");";
    
     

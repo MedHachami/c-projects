@@ -14,13 +14,13 @@ int stats(sqlite3* db){
         switch (choice)
         {
         case 1 :
-            printf("count");
+            countTask(db1);
         break;
         case 2 :
-           printf("complete\n");
+           completeIncTask(db1);
         break;
         case 3 :
-           printf("remaining\n");
+            remainingDays(db1);
         break;
         case 4 :
             return 0;
