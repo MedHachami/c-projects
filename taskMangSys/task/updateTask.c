@@ -1,11 +1,12 @@
 #include "taskMenu.h"
 
 int updateTask(sqlite3* db){
+    
     struct Task newTask;
     int rc;
     char status[20];
     sqlite3_stmt *stmt ;
-    
+    printf("\t\t\t\t\t****************\033[31mUPDATE TASK\033[0m***************************\n");
     printf("\t\t\t\t\t\t Enter task id: \n");
     scanf("%d", &newTask.id);
 

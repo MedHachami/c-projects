@@ -4,7 +4,7 @@ int deleteTask(sqlite3* db){
     
     int rc,targetID;
     sqlite3_stmt *stmt ;
-    
+    printf("\t\t\t\t\t****************\033[31mDELETE TASK\033[0m***************************\n");
     printf("\t\t\t\t\t\t Enter task id: \n");
     scanf("%d", &targetID);
 
@@ -27,12 +27,12 @@ int deleteTask(sqlite3* db){
             return 1;
         }
         
-        sqlite3_finalize(stmt); // Clean up the statement
+       
     } else {
         fprintf(stderr, "SQL error: %s\n", sqlite3_errmsg(db));
         return 1;
     }
-    
+     sqlite3_finalize(stmt); // Clean up the statement
     
     
 }

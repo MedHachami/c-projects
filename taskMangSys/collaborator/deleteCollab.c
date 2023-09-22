@@ -4,7 +4,7 @@ int deleteCollab(sqlite3* db){
     
     int rc,targetID;
     sqlite3_stmt *stmt ;
-    
+    printf("\t\t\t\t\t****************\033[31mDELETE COLLABORATOR\033[0m***************************\n");
     printf("\t\t\t\t\t\t Enter collaborator id: \n");
     scanf("%d", &targetID);
 

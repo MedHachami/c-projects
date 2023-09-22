@@ -13,8 +13,7 @@ void doneTaskCollab(sqlite3* db){
         sqlite3_close(db);
         
     }
-
-    printf("\t\t\t\t\t************************TASKS**********************\n");
+    printf("\t\t\t\t\t****************\033[31mDone Tasks\033[0m***************************\n");
     while((rc = sqlite3_step(stmt)) == SQLITE_ROW){
         
         const char* taskTitle = (const char*)sqlite3_column_text(stmt,0);

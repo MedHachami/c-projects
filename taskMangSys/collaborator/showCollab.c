@@ -13,7 +13,7 @@ void showCollab(sqlite3* db){
         
     }
 
-    printf("\t\t\t\t\t************************COLLABORATORS**********************\n");
+    printf("\t\t\t\t\t****************\033[31mCOLLABORATORS\033[0m***************************\n");
     while((rc = sqlite3_step(stmt)) == SQLITE_ROW){
         int id = sqlite3_column_int(stmt,0);
         const char* fullName = (const char*)sqlite3_column_text(stmt,1);

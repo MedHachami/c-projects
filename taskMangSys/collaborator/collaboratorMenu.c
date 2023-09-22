@@ -21,21 +21,25 @@ int collab(){
         switch (choice)
         {
         case 1 :
+                printf("\e[1;1H\e[2J");
                 int addResult = addCollab(db);
                 if(addResult == 0){
                      printf("\t\t\t\t\t\t\t Collaborator added successfully\n");
                 }
         break;
         case 2 :
-            int updateResult = updateCollab(db);
+                printf("\e[1;1H\e[2J");
+                int updateResult = updateCollab(db);
                 if(updateResult == 0){
                      printf("\t\t\t\t\t\t\t Collaborator updated successfully\n");
                 }
         break;
         case 3 :
+            printf("\e[1;1H\e[2J");
             showCollab(db);
         break;
         case 4 :
+            printf("\e[1;1H\e[2J");
             int deleteResult = deleteCollab(db);
             if(deleteResult == 0){
                      printf("\t\t\t\t\t\t\t Collaborator deleted successfully\n");

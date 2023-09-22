@@ -1,7 +1,7 @@
 #include "taskMenu.h"
 
 int  addTask(sqlite3* db){
-    
+    printf("\t\t\t\t\t****************\033[31mADD TASK\033[0m***************************\n");
     sqlite3_stmt* stmt;
     int rc;
     

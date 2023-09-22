@@ -18,6 +18,7 @@ int  addCollab(sqlite3* db){
         return 1;
     }
     // strcpy(newTask.status, "To do");
+    printf("\t\t\t\t\t****************\033[31mADD COLLABORATOR\033[0m***************************\n");
     printf("\t\t\t\tEnter collaborator full name: \n");
     scanf(" %[^\n]s", newCollab.fullName);
 

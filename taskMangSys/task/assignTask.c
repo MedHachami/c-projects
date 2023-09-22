@@ -38,9 +38,9 @@ void assignTask(sqlite3* db){
         return; // Exit the function on error
     }
 
-    
+    printf("\t\t\t\t\t****************\033[31mASIGN TASK\033[0m***************************\n");
 
-    printf("\t\t\t\t\t************************TASKS**********************\n");
+    
     printf("\t\t\t\t\t Task :\n");
     int i=0,numTasks=1;
     while((rc1 = sqlite3_step(stmt1)) == SQLITE_ROW){
@@ -119,9 +119,9 @@ void assignTask(sqlite3* db){
     printf("\t\t\t\t\t Task %s assigned to %s :\n",foundTask->title,foundCollab->fullName);
     else printf("\t\t\t\t\t Not found :\n");
 
-    // sqlite3_finalize(stmt);
+    sqlite3_finalize(stmt);
     sqlite3_finalize(stmt1);
     sqlite3_finalize(stmt2);
-
+    
 
 }

@@ -24,32 +24,41 @@ int task(){
         switch (choice)
         {
         case 1 :
+                printf("\e[1;1H\e[2J");
                 int addResult = addTask(db);
                 if(addResult == 0){
                     printf("\t\t\t\t\t\t\t Task added successfully\n");
                 }
+                
         break;
         case 2 :
+            printf("\e[1;1H\e[2J");
             int editResult = updateTask(db);
             if(editResult == 0){
                 printf("\t\t\t\t\t\t Task edit successfully\n");
             }
         break;
         case 3 :
+            printf("\e[1;1H\e[2J");
             showTasks(db);
         break;
         case 4 :
+            printf("\e[1;1H\e[2J");
             findTask(db);
             break;
         case 5 :
+            printf("\e[1;1H\e[2J");
             int deleteResult = deleteTask(db);
             if(deleteResult == 0){
                 printf("\t\t\t\t\t\t Task deleted successfully\n");
             }
+            break;
         case 6:
+            printf("\e[1;1H\e[2J");
             assignTask(db);
         break;
         case 7 :
+            printf("\e[1;1H\e[2J");
             stats(db);
         break;
         case 8 :

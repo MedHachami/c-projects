@@ -19,9 +19,11 @@ int taskCollab(){
         switch (choice)
         {
         case 1 :
-               showTaskCollab(db);
+            printf("\e[1;1H\e[2J");
+            showTaskCollab(db);
         break;
         case 2 :
+            printf("\e[1;1H\e[2J");
             doneTaskCollab(db);
         break;
         case 3 :

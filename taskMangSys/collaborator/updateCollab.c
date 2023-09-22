@@ -4,7 +4,7 @@ int updateCollab(sqlite3* db){
     struct Collaborator newCollab;
     int rc;
     sqlite3_stmt *stmt ;
-    
+    printf("\t\t\t\t\t****************\033[31mUPDATE COLLABORATOR\033[0m***************************\n");
     printf("\t\t\t\t\t\t Enter collaborator id: \n");
     scanf("%d", &newCollab.id);
 
